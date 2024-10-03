@@ -1,6 +1,3 @@
-
-// Test Comment
-
 #include <cmath>
 #include <cstddef>
 #include <cstdint>
