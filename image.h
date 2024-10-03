@@ -1,11 +1,12 @@
+#ifndef ENGINE_IMAGE
+#define ENGINE_IMAGE
+
 #include <vulkan/vk_platform.h>
 #include <vulkan/vulkan_core.h>
 
 #include <string>
 #include <memory>
 
-#ifndef ENGINE_IMAGE
-#define ENGINE_IMAGE
 
 namespace engine {
 
