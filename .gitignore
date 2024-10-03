@@ -34,5 +34,8 @@
 # Compiled
 *.spv
 
+# Project Name
+HelloTriangle
+
 # VScode
 .vscode/*
