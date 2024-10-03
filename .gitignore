@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+# Compiled
+*.spv
+
+# Project Name
+HelloTriangle
+
+# VScode
+.vscode/*
