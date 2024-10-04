@@ -1,26 +1,32 @@
-#include <cmath>
-#include <cstddef>
-#include <cstdint>
+#include <cmath> //
+#include <cstddef> //
+#include <cstdint> //
 #include <glm/ext/matrix_transform.hpp>
 #include <glm/trigonometric.hpp>
-#include <limits>
-#include <algorithm>
-#include <map>
-#include <unordered_map>
-#include <optional>
-#include <ostream>
-#include <set>
+#include <limits> //
+#include <algorithm> //
+#include <map> //
+#include <unordered_map> //
+#include <optional> //
+#include <ostream> //
+#include <set> // 
+
+#if defined(WIN32) || defined(WIN64)
+#include <stdint.h>
+#else
 #include <sys/types.h>
-#include <utility>
-#include <vector>
-#include <exception>
-#include <iostream>
-#include <stdexcept>
-#include <cstdlib>
-#include <cstring>
-#include <fstream>
-#include <chrono>
-#include <array>
+#endif
+
+#include <utility> //
+#include <vector> //
+#include <exception> //
+#include <iostream> //
+#include <stdexcept> //
+#include <cstdlib> //
+#include <cstring> //
+#include <fstream> //
+#include <chrono> //
+#include <array> //
 
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
@@ -46,7 +52,7 @@
 #define TINYOBJLOADER_IMPLEMENTATION
 #include <tinyobjloader/tiny_obj_loader.h>
 
-#include "image.h"
+//#include "image.h"
 
 
 const uint32_t WIDTH = 800;
@@ -91,7 +97,7 @@ static std::vector<char> readFile (const std::string& filename) {
     std::ifstream file(filename, std::ios::ate | std::ios::binary);
 
     if (!file.is_open()) {
-        throw std::runtime_error("Failed to open file!");
+        throw std::runtime_error("Failed to open file: " + filename);
     }
 
     size_t fileSize = (size_t) file.tellg();
@@ -321,7 +327,7 @@ private:
         std::cout << "Creating texture sampler" << std::endl;
         createTextureSampler();
 
-        std::cout << "loading model" << std::endl;
+        std::cout << "Loading model" << std::endl;
         loadModel();
 
         std::cout << "Creating vertex buffer" << std::endl;
@@ -342,7 +348,7 @@ private:
         std::cout << "Creating command buffers" << std::endl;
         createCommandBuffers();
 
-        std::cout << "Creating ync objects" << std::endl;
+        std::cout << "Creating sync objects" << std::endl;
         createSyncObjects();
 
         std::cout << "Finished init" << std::endl;

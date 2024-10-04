@@ -1,3 +1,4 @@
+/*
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb/stb_image.h>
 #include <stdexcept>
@@ -9,6 +10,7 @@
 //      global physical device
 //      global access to command buffer
 //      global access to command buffer helpers 
+
 
 using namespace engine;
 
@@ -131,3 +133,4 @@ void generateMipmaps (VkImage image, VkFormat imageFormat, int32_t texWidth, int
 
     endSingleTimeCommands(commandBuffer);
 }
+*/
