@@ -39,3 +39,11 @@ HelloTriangle
 
 # VScode
 .vscode/*
+
+.vs/
+CppProperties.json
+*.vcxproj*
+
+Debug/
+x64/
+
