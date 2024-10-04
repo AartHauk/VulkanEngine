@@ -42,7 +42,6 @@ HelloTriangle
 
 .vs/
 CppProperties.json
-*.vcxproj*
 
 Debug/
 x64/
